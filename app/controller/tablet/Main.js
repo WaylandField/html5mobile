@@ -12,12 +12,8 @@ Ext.define('Kitchensink.controller.tablet.Main', {
     /**
      * This is called whenever the user taps on an item in the main navigation NestedList
      */
-    onNavTap: function(nestedList, list, index) {
-        var record = list.getStore().getAt(index);
-
-        if (record.isLeaf()) {
-            this.redirectTo(record);
-        }
+    onNavTap: function(nestedList, record) {
+        this.redirectTo(record);
     },
 
     /**
@@ -85,6 +81,11 @@ Ext.define('Kitchensink.controller.tablet.Main', {
 //
 //        this.getToolbar().setTitle(item.get('text'));
 //        this.getSourceButton().setHidden(false);
+    },
+    
+    showReportView : function(reportId){
+    	var nav  = this.getNav();
+    	var report = 
     },
 
     showMenuById: Ext.emptyFn

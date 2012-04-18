@@ -16,7 +16,7 @@ Ext.define('Kitchensink.controller.Main', {
         viewCache: [],
 
         refs: {
-            nav: '#mainNestedList',
+            nav: '#reportsNavi',
             main: 'mainview',
             toolbar: '#mainNavigationBar',
             sourceButton: 'button[action=viewSource]',
@@ -33,13 +33,15 @@ Ext.define('Kitchensink.controller.Main', {
                 tap: 'onSourceTap'
             },
             nav: {
-                itemtap: 'onNavTap'
+                select: 'onNavTap'
             }
         },
 
         routes: {
             'demo/:id': 'showViewById',
-            'menu/:id': 'showMenuById'
+            'menu/:id': 'showMenuById',
+            'report/:id': 'showReportById'
+            
         },
 
         /**
@@ -59,6 +61,13 @@ Ext.define('Kitchensink.controller.Main', {
         this.showView(view);
         this.setCurrentDemo(view);
         this.hideSheets();
+    },
+    
+    /**
+     * Finds a given view by ID and shows it. End-point of the "demo/:id" route
+     */
+    showReportById: function(id) {
+        alert(id);
     },
 
     /**

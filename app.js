@@ -38,7 +38,7 @@ Ext.application({
     ],
 
     //loads app/store/Demos.js, which contains the tree data for our main navigation NestedList
-    stores: ['Demos'],
+    stores: ['Demos','Reports'],
 
     //the Kitchen Sink has Phone and Tablet modes, which rearrange the screen based on the type
     //of device detected
