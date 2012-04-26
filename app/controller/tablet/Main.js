@@ -85,7 +85,6 @@ Ext.define('Kitchensink.controller.tablet.Main', {
     
     showReportView : function(reportId){
     	var nav  = this.getNav();
-    	var report = 
     },
 
     showMenuById: Ext.emptyFn
