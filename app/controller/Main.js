@@ -20,6 +20,7 @@ Ext.define('Kitchensink.controller.Main', {
             main: 'mainview',
             toolbar: '#mainNavigationBar',
             sourceButton: 'button[action=viewSource]',
+            canvas : '#launchscreen',
 
             sourceOverlay: {
                 selector: 'sourceoverlay',
@@ -34,6 +35,9 @@ Ext.define('Kitchensink.controller.Main', {
             },
             nav: {
                 select: 'onNavTap'
+            },
+            canvas : {
+            	tap: 'onRoleTap'
             }
         },
 
