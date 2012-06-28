@@ -22,8 +22,7 @@ Ext.define('Kitchensink.controller.tablet.Main', {
      * @param {Kitchensink.model.Demo} item The Demo model instance for which we want to show a view
      */
     showView: function(item) {
-        var nav  = this.getNav(),
-            view = this.createView(this.getViewName(item)),
+        var view = this.createView(this.getViewName(item)),
             main = this.getMain(),
             anim = item.get('animation'),
             layout  = main.getLayout(),
@@ -35,12 +34,6 @@ Ext.define('Kitchensink.controller.tablet.Main', {
             newAnim = layout.getAnimation();
         }
 
-        nav.setDetailContainer(main);
-        nav.setDetailCard(view);
-        nav.goToNode(item.parentNode);
-        nav.goToLeaf(item);
-        nav.getActiveItem().select(item);
-
         if (newAnim) {
             newAnim.on('animationend', function() {
                 layout.setAnimation(initialAnim);
@@ -48,7 +41,14 @@ Ext.define('Kitchensink.controller.tablet.Main', {
         }
 
         this.getToolbar().setTitle(item.get('text'));
-        this.getSourceButton().setHidden(false);
+        this.getToolbar().insert(0, {
+        	xtype:'button',
+        	text: 'Back',
+            ui: 'back',
+            align: 'left'
+        });
+        this.getLaunchscreen().removeAll(true, true);
+        this.getLaunchscreen().setItems([view]);
 //        nav.goToNode(item.parentNode);
 //        nav.goToLeaf(item);
 //    },

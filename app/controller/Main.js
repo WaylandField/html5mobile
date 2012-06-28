@@ -19,6 +19,7 @@ Ext.define('Kitchensink.controller.Main', {
             nav: '#reportsNavi',
             main: 'mainview',
             toolbar: '#mainNavigationBar',
+            launchscreen : "#launchscreen",
             sourceButton: 'button[action=viewSource]',
             canvas : '#launchscreen',
 
@@ -44,7 +45,8 @@ Ext.define('Kitchensink.controller.Main', {
         routes: {
             'demo/:id': 'showViewById',
             'menu/:id': 'showMenuById',
-            'report/:id': 'showReportById'
+            'report/:id': 'showReportById',
+            'role/:id':'showReportById'
             
         },
 
@@ -67,11 +69,20 @@ Ext.define('Kitchensink.controller.Main', {
         this.hideSheets();
     },
     
-    /**
-     * Finds a given view by ID and shows it. End-point of the "demo/:id" route
-     */
-    showReportById: function(id) {
-        alert(id);
+    showReportById : function(id){
+    	this.showView({get:function get(t){
+    		var jj = {
+                text: 'Team Member Readiness for the Role "Dev Manager"',
+                card: false,
+                id: 'roleView',
+                view: 'RoleView',
+                animation: {
+                    type: 'slide',
+                    direction: 'up'
+                }
+    		}
+    		return jj[t]
+    	}});
     },
 
     /**

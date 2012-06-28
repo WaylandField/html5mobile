@@ -1,39 +1,13 @@
-.x-list .x-list-item {
-position: relative;
-color: black;
-	background: -webkit-gradient(linear,center top,center bottom,from(#FCFCFC),to(#EDEDED));
-}
-
 .rpt_cls{
-	height:44px;
+	height:20px;
 }
-.photo{
-height: 44px;
-width: 44px;
-float: left;
-padding: 2px;
-background-color: white;
-border: 1px solid #DDD;
-border-top: 1px solid #EFEFEF;
-border-bottom: 1px solid #9D9D9D;
+.rpt_cls .color{
+width:16px;height:16px;float:left;
 }
-.photo .photo_cover {
-height: 36px;
-width: 36px;
-overflow: hidden;
+.rpt_cls .user{
+	font-size:16px;
+	padding-left:4px;
 }
-.rpt_info{
-	float: left;
-}
-.rpt_info .rpt_name{
-padding-left:2px;
-font-weight: bold;
-margin: 0;
-font-size: 14px;
-}
-
-.rpt_info .rpt_title{
-padding-left:4px;
-font-size: 12px;
-margin: 3px 0 0 0;
+.rpt_cls .ready{
+	float:right;
 }

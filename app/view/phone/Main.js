@@ -1,37 +1,44 @@
 Ext.define('Kitchensink.view.phone.Main', {
-    extend: 'Ext.dataview.NestedList',
-    requires: ['Ext.TitleBar'],
+    extend: 'Ext.Container',
+    xtype: 'mainview',
 
-    id: 'mainNestedList',
+    requires: [
+        'Ext.dataview.NestedList',
+        'Ext.navigation.Bar',
+        'Kitchensink.view.RoleView',
+		'Kitchensink.view.CanvasView'
+    ],
 
     config: {
         fullscreen: true,
-        title: 'Kitchen Sink',
-        useTitleAsBackText: false,
+
         layout: {
+            type: 'card',
             animation: {
-                duration: 250,
-                easing: 'ease-in-out'
+                type: 'slide',
+                direction: 'left',
+                duration: 250
             }
         },
 
-        store: 'Demos',
-
-        toolbar: {
-            id: 'mainNavigationBar',
-            xtype : 'titlebar',
-            docked: 'top',
-            title : 'Kitchen Sink',
-
-            items: {
-                xtype : 'button',
-                id: 'viewSourceButton',
-                hidden: true,
-                align : 'right',
-                ui    : 'action',
-                action: 'viewSource',
-                text  : 'Source'
+        items: [
+            {
+                id: 'mainNavigationBar',
+                xtype : 'titlebar',
+                docked: 'top',
+                title : 'Eagle Eyes - Team Career Growth In-depth',
+            },
+            {
+                id: 'launchscreen',
+                cls : 'container',
+                items: [
+					{
+					    xtype : 'canvas'
+					}
+                ]
             }
-        }
+        ]
     }
 });
+
+
