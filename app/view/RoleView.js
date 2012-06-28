@@ -10,7 +10,6 @@ Ext.define('Kitchensink.view.RoleView', {
 	    },
 	    items: [
 	            {
-	                id: 'chartArea',
 	                xtype : 'roleChart',
 	                flex: 1,
 	                width:790,

@@ -8,7 +8,7 @@
  */
 Ext.define('Kitchensink.controller.Main', {
     extend: 'Ext.app.Controller',
-
+    requires : ['Kitchensink.view.RoleView','Kitchensink.view.UserView'],
     config: {
         /**
          * @private
@@ -46,7 +46,8 @@ Ext.define('Kitchensink.controller.Main', {
             'demo/:id': 'showViewById',
             'menu/:id': 'showMenuById',
             'report/:id': 'showReportById',
-            'role/:id':'showReportById'
+            'role/:id':'showReportById',
+            'user/:id':'showUserById',
             
         },
 
@@ -76,6 +77,21 @@ Ext.define('Kitchensink.controller.Main', {
                 card: false,
                 id: 'roleView',
                 view: 'RoleView',
+                animation: {
+                    type: 'slide',
+                    direction: 'up'
+                }
+    		}
+    		return jj[t]
+    	}});
+    },
+    showUserById : function(id){
+    	this.showView({get:function get(t){
+    		var jj = {
+                text: 'Readiness Of User',
+                card: false,
+                id: 'userView',
+                view: 'UserView',
                 animation: {
                     type: 'slide',
                     direction: 'up'
