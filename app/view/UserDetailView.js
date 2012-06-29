@@ -7,7 +7,7 @@ Ext.define('Kitchensink.view.UserDetailView', {
 		},
 	    items :[
 					{		xtype : 'panel',
-					        html: '<li class="skill">Competencies and Learning Details<ul> <li>Technique Skills<ul><li>JUIC programming 123</li><li>SCA programming 123</li><li>Oracle DB 123</li></ul></li><li>Communication Skills<ul><li>Learning Communication</li><li>Language trainning</li></ul></li><li>Team Manage Skills<ul><li>Manage Courses</li></ul></li><li>Project Manage Skills<ul><li>Agile PDLC Courses</li><li>Waterfall 123</li></ul></li><li>Time Manage Skills<ul><li>Manage Your Time Wisely</li></ul></li></ul></li>',
+					        html: '<li class="skill">Competencies and Learning Details<ul> <li>Technique Skills<ul><li>JUIC programming 123</li><li class="completed">SCA programming 123</li><li class="completed">Oracle DB 123</li></ul></li><li>Communication Skills<ul><li>Learning Communication</li><li class="completed">Language trainning</li></ul></li><li>Team Manage Skills<ul><li>Manage Courses</li><li>Manage Courses1</li><li>Manage Courses2</li></ul></li><li>Project Manage Skills<ul><li>Agile PDLC Courses</li><li class="completed">Waterfall 123</li></ul></li><li>Time Manage Skills<ul><li class="completed">Manage Your Time Wisely</li></ul></li></ul></li>',
 					        ui : 'round',
 					        scrollable: true,
 					        flex:1,

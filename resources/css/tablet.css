@@ -23,10 +23,15 @@ width:16px;height:16px;float:left;
 	font-size:20px;
 	padding: 10px 0 10px 10px;
 }
+.skill .completed{
+	background-image :url(../images/check.png) !important;
+	background-repeat : no-repeat;
+	color: #33cc33;
+}
 .skill ul li ul li{
 	color: #992222;
 	font-size:14px;
-	padding: 0 0 0 10px;
+	padding: 0 0 0 20px;
 }
 .promote{
 	margin-top:20px;
