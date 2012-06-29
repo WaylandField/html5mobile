@@ -1,7 +1,8 @@
 Ext.define('Kitchensink.view.UserView', {
     extend: 'Ext.Container',
     xtype: 'userView',
-    requires : ['Kitchensink.view.TimeChart', 'Kitchensink.view.UserChart','Kitchensink.view.UserDetailView'],
+    requires : ['Kitchensink.view.TimeChart', 'Kitchensink.view.UserChart'
+                ,'Kitchensink.view.PromoteDetailView','Kitchensink.view.UserDetailView'],
     config :{
 	    layout: {
 	        type: 'hbox',
@@ -50,7 +51,7 @@ Ext.define('Kitchensink.view.UserView', {
 						            				width: 700
 						            			},
 						        	            {
-						        	            	xtype: 'userDetailView',
+						        	            	xtype: 'promoteDetailView',
 						        	            	width:320,
 						        	            	flex : 2
 						        	            }

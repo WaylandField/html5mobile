@@ -11,3 +11,37 @@ width:16px;height:16px;float:left;
 .rpt_cls .ready{
 	float:right;
 }
+.skill{
+	margin-top:20px;
+	color:#000000;
+	font-size:21px;
+	font-weight:bold;
+}
+.skill ul li{
+	list-style-type:square;
+	color: #336699;
+	font-size:20px;
+	padding: 10px 0 10px 10px;
+}
+.skill ul li ul li{
+	color: #992222;
+	font-size:14px;
+	padding: 0 0 0 10px;
+}
+.promote{
+	margin-top:20px;
+	color:#000000;
+	font-size:21px;
+	font-weight:bold;
+}
+.promote ul li{
+	list-style-type:square;
+	color: #cc2222;
+	font-size:20px;
+	padding: 10px 0 10px 10px;
+}
+.promote ul li ul li{
+	color: #996633;
+	font-size:18px;
+	padding: 0 0 0 10px;
+}

@@ -88,7 +88,7 @@ Ext.define('Kitchensink.controller.Main', {
     showUserById : function(id){
     	this.showView({get:function get(t){
     		var jj = {
-                text: 'Readiness Of User',
+                text: 'Is User Ready To Be "Dev Manager"',
                 card: false,
                 id: 'userView',
                 view: 'UserView',
